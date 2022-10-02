@@ -19,8 +19,8 @@ A quick few notes before I dive in. As we're working with Machine Learning this 
   * [Using your IDE](#using-your-ide) 
 * [Miscellaneous](#miscellaneous)<br/>
 _Not done yet! Will fill in stuff as we go along!_
-  * [Python](#https://www.python.org/)
-  * [Git Commands](#https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html)
+  * [Python](https://www.python.org/)
+  * [Git Commands](https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html)
   
 # [Introduction to Machine Learning](#introML)
 ## What is Machine Learning?
