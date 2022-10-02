@@ -7,17 +7,21 @@ A quick few notes before I dive in. As we're working with Machine Learning this 
 
 ## Table of Contents  
 
-* [IDE Setup - Pycharm](#pycharm) <br/>
-  * [Installation](#installation) <br/>
-  * [Project setup](#projectSetup) <br/>
-  * [Using your IDE](#pycharmUse) <br/>
-* [Introduction to Machine Learning](#introML) <br/>
-  * [Computer Vision](#pycharmUse) <br/>
-* [Introduction to OpenCV]() <br/>
-* [Miscellaneous]() <br/>
-  * [Python](#python) <br/>
-  * [Git](#git) <br/>
-
+* [Introduction to Machine Learning](#introduction-to-machine-learning)
+  * [Machine Learning Overview](#what-is-machine-learning)
+  * [Computer Vision](#computer-vision)
+  * [Introduction to OpenCV](#opencv)
+* [IDE Setup - Pycharm](#ide-setup---pycharm) 
+  * [Installation](#installation) 
+    * [Python](#python)
+    * [Pycharm](#pycharm)
+  * [Project setup](#project-setup)
+  * [Using your IDE](#using-your-ide) 
+* [Miscellaneous](#miscellaneous)<br/>
+_Not done yet! Will fill in stuff as we go along!_
+  * [Python](#https://www.python.org/)
+  * [Git Commands](#https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html)
+  
 # [Introduction to Machine Learning](#introML)
 ## What is Machine Learning?
 The official definition: The use and development of computer systems that are able to learn and adapt without following explicit instructions, by using algorithms and statistical models to analyze and draw inferences from patterns in data.
@@ -25,6 +29,7 @@ The official definition: The use and development of computer systems that are ab
 Unofficially, the way I think about it is simply using data to predict future events/outcomes. For example, if you consistently wake up at 9:30 AM +- 30 minutes for a year, I'm going to predict that on January 1st of the next year, you're going to wake up at 9:30 AM. Bam, I just applied the very concepts that ML is based on. Machine Learning encompasses a very broad set of subfields ranging from Deep Learning to Computer Vision. For this project, we're going to focusing on Computer Vision and potentially some Natural Language Processing, so that's what I'm going to be focusing on here!
 
 Let's talk about the basics of ML. Consider a 2d graph of data points that plot the grade of EECS 183 students against the average day that they start projects. We can then use an algorithm as a way of finding a function that maps to the data well (meaning the difference between each data point and the function's prediction is minimized). In basic cases, the function may look something like this. This is a basic case of [**linear regression**](https://www.ibm.com/topics/linear-regression#:~:text=Resources-,What%20is%20linear%20regression%3F,is%20called%20the%20independent%20variable.).
+
 ![image](https://user-images.githubusercontent.com/42425774/193395816-c1375cf2-7c29-4814-8b9f-0ac57dcf27a4.png)
 
 _Of course, the data may also be mapped best with other more complex functions: quadratic, polynomial, log, exponential etc._
@@ -34,7 +39,7 @@ Or in some cases, you're looking at differentiating data. For example, universit
 
 This was just a quick intro to the idea of what ML can do! If you're interested in pursuing ML in a more standard format (a.k.a courses), I would consider `Calculus I/II/(Potentially III)-> Discrete Math -> Linear Algebra -> Data Structures and Algorithms -> Machine Learning` to be a pretty standard course set. Like so many other technical disciplines, Machine Learning is very much based on math, specifically matrices and optimization. Thus, Lin Alg and Calculus are pretty crucial! The other courses - Discrete Math and DSA - are just general CS courses that you should take anyway...
 
-### Computer Vision
+## Computer Vision
 Focusing in on Computer Vision (CV), it's the study of using computers to derive data/patterns out of visualizations (e.g. images, videos etc.) At a **very** basic level and focusing on how we'll be using CV, CV works by dividing an image into a grid. Conveniently, screens themselves are grids. Grids of pixels. CV algorithms then can analyze the colour of every pixel and develop patterns based on the change in these pixels as pictures changed. This image describes the process well...
 ![image](https://user-images.githubusercontent.com/42425774/193396391-7de26584-848a-41a6-b337-e62a00c38a32.png)
 
@@ -52,12 +57,22 @@ Everything above this point was a theoretical approach to understanding ML/CV. W
 ### Setting up OpenCV on Pycharm.
 In the top bar click on `Pycharm->Preferences`. Then, go into `Project: [Project Name] -> Python Interpreter`. From here, click on the little `+` at the top of the packages panel. A popup panel will show up displaying a list of all available libraries you can add to your project. You'll want to type in `opencv-python` into the top textbox. Then, click on the option that's labelled exactly that (`opencv-python`) and click install package. Now you'll have access to opencv functions!
 
-# [IDE Setup - Pycharm](#pycharm)
+### Autocomplete isn't working!
+Pycharm's support for autocomplete for OpenCV is really bad. It just doesn't work. So to resolve this, here's a workaround that should work!
+1. In PyCharm, go to `Pycharm -> Preferences -> Python Interpreter`.
+2. Click on the gear symbol next to the interpreter path and select `SHOW ALL`.
+3. Click on that icon that looks like a folder tree (on the top bar). It should be last icon (at least in my version of Pycharm it is).
+4. Click on the "+" icon.
+5. Navigate to <your_project_path>\venv\lib\<python3.10 (or whatever python version you have)\site-packages\cv2
+6. Click `open` then `OK`. 
+7. Autocomplete _should_ be working now!
+
+# IDE Setup - Pycharm
 This section is optional. Choosing an IDE is a personal choice; I just _recommend_ that you use Pycharm. Jetbrains seems to have top notch IDEs for pretty much any language and Pycharm is no exception. I think it's one of the more powerful IDEs out there, but if you prefer something else, feel free to go with that! If you have no preference or haven't coded in Python before, Pycharm could be a good place to start. 
 
 _As a quick note, the following tutorial and screenshots are all on Mac. If you have a Windows, you should be able to follow along without any issues, but just note that things may look a little different. But as usual, if you encounter any issues that you can't fix, feel free to reach out!_
 
-## [Installation](#installation)
+## Installation
 To start, you'll want to install [Python](https://www.python.org/downloads/). At the date of creation of this tutorial, the latest stable release of Python is 3.10.7. If you already have Python installed, I would recommend upgrading to 3.10.7 if you don't already have it. If you don't, it's not a HUGE deal, but 3.10.7 supports adding data type labels to parameters, return types etc. that make code more readable and easier to understand. 
 
 One **GREAT** thing about Python from a setup standpoint is that you don't have to go through the process of setting up a compiler. Python's interpreter combines the interpreter and compiler, meaning that there's much less setup needed than a language like C++. The disadvantage of this is that in comparison to other languages, Python is often **significantly slower**. If you've ever compared runtimes between C++ code and Python code, C++ is almost always significantly faster.
@@ -65,7 +80,7 @@ One **GREAT** thing about Python from a setup standpoint is that you don't have 
 
 _As a side note, if you're interested in learning more about Python as a general language, they have an [FAQ section](https://docs.python.org/3/faq/general.html) that has some interesting info!_
 
-### Python Installation
+### Python
 1. Go through the installation module and just sticking with all the default options is fine!
 2. Once you're done that, either navigate to the installation directory or if you're on Mac, it should just pop up in finder. It should look something like the image below...
 
@@ -83,7 +98,7 @@ _As a side note, if you're interested in learning more about Python as a general
 
 ![image](https://user-images.githubusercontent.com/42425774/193393601-ab31106a-4829-4b0f-be7d-3a9b7cbe699a.png)
 
-## [Project Setup](#projectSetup)
+## Project Setup
 1. Once you have the welcome screen open, you'll want to click on `New Project`. Something like the following should pop up. Stick with the `Pure Python` option.
 ![image](https://user-images.githubusercontent.com/42425774/193393671-d7707e7e-86c3-4d5e-8e96-397416ff8234.png)
 2. You can change the project location (the first bar at the top of the panel) to wherever is convenient. _Pay attention to the next few steps! They're important to get right and if you mess up, it can be time-consuming and annoying to fix!
