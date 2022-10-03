@@ -6,13 +6,10 @@ Hi! Welcome to ML bootcamp. I created this resource for all of you to get a quic
 A quick few notes before I dive in. As we're working with Machine Learning this semester - more specifically, Computer Vision - we're going to be coding in Python. For reasons I won't list here, working in a high-level language like Python grants you alot more flexibility, making coding much easier! In addition, we're going to be relying on some frameworks that are industry-standard, and they're all in Python. All of this goes to say that Python is the way to go for anything machine learning! If you're not familiar with Python, no worries! It's much easier to know a low-level language like C++ and then go on to learn Python, so I have no reason to think that all of you won't be able to catch on fairly quickly! 
 
 Tutorial 1: [Basics of Python](https://colab.research.google.com/drive/1fsSr3XKjdiorIWPp7b5QTQ06phcdG0Aa?usp=sharing)
-https://colab.research.google.com/drive/1fsSr3XKjdiorIWPp7b5QTQ06phcdG0Aa?usp=sharing
 
 Tutorial 2: [Numpy and Data Processing](https://colab.research.google.com/drive/1aaznBQvQMmOsxS0hFBEeGbvmWeR9whZf?usp=sharing)
-https://colab.research.google.com/drive/1aaznBQvQMmOsxS0hFBEeGbvmWeR9whZf?usp=sharing
 
 Tutorial 3: [OpenCV](https://colab.research.google.com/drive/1eekb4H00iNaHXi_6OAwyELcdi64wWaNm?usp=sharing)
-https://colab.research.google.com/drive/1eekb4H00iNaHXi_6OAwyELcdi64wWaNm?usp=sharing
 
 
 ## Table of Contents  
